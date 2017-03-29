@@ -43,7 +43,7 @@ func main() {
 	fmt.Printf("\n%v to %v\n\n", strings.ToUpper(response.From.Name), strings.ToUpper(response.To.Name))
 
 	tableData := buildTableData(response)
-	tableHeader := []string{"Nr", "Platform", "Departure Time", "Arrival Time"}
+	tableHeader := []string{"Nr", "Platform", "Departure", "Arrival"}
 
 	writeTable(tableHeader, tableData)
 	println()
@@ -55,8 +55,8 @@ func buildTableData(response responseStruct) [][]string {
 		tableData = append(tableData, []string{
 			strconv.Itoa(i),
 			con.From.Platform,
-			time.Unix(int64(con.From.DepartureTimestamp), 0).Format("15:04:05"),
-			time.Unix(int64(con.To.ArrivalTimestamp), 0).Format("15:04:05")})
+			time.Unix(int64(con.From.DepartureTimestamp), 0).Format("15:04"),
+			time.Unix(int64(con.To.ArrivalTimestamp), 0).Format("15:04")})
 	}
 
 	return tableData
