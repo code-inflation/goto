@@ -1,4 +1,6 @@
 # goto
+[![Build Status](https://travis-ci.com/code-inflation/goto.svg?token=MisZzCBjpXBwSM6FUYMt&branch=master)](https://travis-ci.com/code-inflation/goto)  
+
 Command line client for searching public transport connections in switzerland
 
 ## Usage
