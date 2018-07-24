@@ -11,5 +11,5 @@ goto <FROM> <TO>
 ## Installation
 ```
 wget https://github.com/code-inflation/goto/releases/download/0.0.1/goto -O /usr/local/bin/goto
-chmod 755 /usr/local/bin/goto
+chmod +x /usr/local/bin/goto
 ```
